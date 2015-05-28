@@ -17,15 +17,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Item_2Activity"
-            android:label="@string/title_activity_item_2"
+            android:name=".Item_1Activity"
+            android:label="@string/title_activity_item_1"
             android:theme="@style/AppTheme" >
+
+
+        </activity>
+        <activity
+
+            android:name=".Item_2Activity"
+              android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name=".Item_3Activity"
-            android:label="@string/title_activity_item_3"
-            android:theme="@style/AppTheme" >
+            android:label="@string/title_activity_item_3">
+
         </activity>
+        <activity android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>
