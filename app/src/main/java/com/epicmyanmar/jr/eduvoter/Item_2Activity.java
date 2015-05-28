@@ -6,8 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,15 +18,14 @@ import adapter.Item2Adapter;
 public class Item_2Activity extends ActionBarActivity {
     Toolbar toolbar;
     ListView listview;
-    TextView title1, title2;
+    Button title2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_2);
 
-        title1 = (TextView) findViewById(R.id.item2_title1);
-        title2 = (TextView) findViewById(R.id.item2_title2);
+        title2 = (Button) findViewById(R.id.item2_title2);
         toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -36,12 +35,6 @@ public class Item_2Activity extends ActionBarActivity {
         listview.setAdapter(adp);
 
 
-        title1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         title2.setOnClickListener(new View.OnClickListener() {
             @Override
