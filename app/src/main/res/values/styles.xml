@@ -20,5 +20,8 @@
         <!-- android:textColorSecondary is used for coloring the navigation drawer icon and up arrow. -->
         <item name="android:textColorSecondary">#fff</item><!--FF0000  b90606 -->
     </style>
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath" >fonts/avenir-next-demibold.ttf</item>
+    </style>
 
 </resources>

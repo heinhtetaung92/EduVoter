@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import adapter.Cardview_Adapter;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -25,12 +26,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                        .setDefaultFontPath("fonts/avenir-next-demibold.ttf")
+                        .setFontAttrId(R.attr.fontPath)
+                        .build()
+        );
         toolbar=(Toolbar) findViewById(R.id.toolbar);
 
         initialize();
 
         listView = (ListView) findViewById(R.id.main_list);
-        List<String> datalist = Arrays.asList(new String[]{"item1","item2","item_3"});
+        List<String> datalist = Arrays.asList(new String[]{"အဓိပ္ပယ်ဖွင့်ဆိုချက်များ","မဲစာရင်းပြုစုခြင်းနှင့် မဲစာရင်းစစ်ဆေးခြင်း","FAQ"});
         Cardview_Adapter adp = new Cardview_Adapter(this, datalist);
         listView.setAdapter(adp);
 
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
     void initialize(){
         setSupportActionBar(toolbar);
+
 
     }
 
