@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.epicmyanmar.jr.eduvoter.Item_2Activity">
+    tools:context="com.epicmyanmar.jr.eduvoter.Item_2Activity"
+    android:background="@android:color/white">
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,36 +22,42 @@
             android:layout_gravity="left"
             android:textSize="20dp" />
 
-
-
     </android.support.v7.widget.Toolbar>
 
-    <TextView
+ <!--   <TextView
         android:id="@+id/item2_title1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Item1"
         android:textSize="16sp"
+        android:textColor="#333333"
         android:padding="8dp"
         android:gravity="center_horizontal"
-        android:layout_below="@id/toolbar"/>
+        android:layout_below="@id/toolbar"/>-->
+
+    <Button
+        android:id="@+id/item2_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item2"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:background="#2196F3"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:padding="8dp"/>
 
     <ListView
         android:id="@+id/item2_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/item2_title1"
-        android:layout_marginBottom="56dp"/>
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/item2_title2"
+        android:background="@android:color/white"/>
 
 
-    <TextView
-        android:id="@+id/item2_title2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Item2"
-        android:textSize="16sp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"
-        android:padding="8dp"/>
+
 
 </RelativeLayout>

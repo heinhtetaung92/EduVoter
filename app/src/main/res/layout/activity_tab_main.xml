@@ -6,7 +6,6 @@
 
 
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
@@ -29,17 +28,16 @@
             app:theme="@style/Toolbar" />-->
 
 
-        <View
+        <!--<View
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
-
-
+            android:layout_height="5dp" />-->
 
         <com.epicmyanmar.jr.eduvoter.SlidingTabLayout
             android:id="@+id/sliding_tabs"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@color/primary_green" />
+            android:background="@color/primary_green"
+            />
     </LinearLayout>
 
 </FrameLayout>
