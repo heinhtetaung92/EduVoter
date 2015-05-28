@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     void initialize(){
         setSupportActionBar(toolbar);
 
+
     }
     void BindData(){
 

@@ -1,5 +1,6 @@
 package com.epicmyanmar.jr.eduvoter;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -47,6 +48,12 @@ public class Item_1Activity extends ActionBarActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
 
         }
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
     }
@@ -94,7 +101,10 @@ public class Item_1Activity extends ActionBarActivity {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Toast.makeText(Item_1Activity.this,""+position+"",Toast.LENGTH_LONG).show();
+            Intent intent=new Intent(getApplication(),DetailActivity.class);
+            intent.putExtra("header",mVoteList.get(position).getHeader());
+            intent.putExtra("description",mVoteList.get(position).getDescription());
+            startActivity(intent);
         }
     }
 }
