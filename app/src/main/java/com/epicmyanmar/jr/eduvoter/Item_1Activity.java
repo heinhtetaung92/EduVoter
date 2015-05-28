@@ -68,11 +68,15 @@ public class Item_1Activity extends ActionBarActivity {
         vr2.setHeader("Header 2");
         vr2.setDescription("Lorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispum");
         VoteRules vr3=new VoteRules();
-        vr3.setHeader("Header 1");
+        vr3.setHeader("Header 3");
         vr3.setDescription("Lorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispum");
+        VoteRules vr4=new VoteRules();
+        vr4.setHeader("Header 4");
+        vr4.setDescription("Lorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispumLorem ispum");
         mVoteList.add(vr1);
         mVoteList.add(vr2);
         mVoteList.add(vr3);
+        mVoteList.add(vr4);
     }
 
     @Override
@@ -102,7 +106,7 @@ public class Item_1Activity extends ActionBarActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent=new Intent(getApplication(),DetailActivity.class);
-            intent.putExtra("header",mVoteList.get(position).getHeader());
+            intent.putExtra("header", mVoteList.get(position).getHeader());
             intent.putExtra("description",mVoteList.get(position).getDescription());
             startActivity(intent);
         }
