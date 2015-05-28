@@ -1,6 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">EduVoter</string>
 
+    <string name="app_name">EduVoter</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_item_2">Item_2Activity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_item_3">Item_3Activity</string>
+
 </resources>
