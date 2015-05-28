@@ -33,23 +33,11 @@
         android:layout_marginTop="70dp">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:textColor="@android:color/black"
-            android:id="@+id/tv_detail_header"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Large Text"
-            android:textColor="@android:color/black"
-            android:id="@+id/tv_detail_description"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/tv_detail_header"/>
+        <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/wv_detail"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </FrameLayout>

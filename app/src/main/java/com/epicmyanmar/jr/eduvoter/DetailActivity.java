@@ -9,26 +9,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 
 public class DetailActivity extends AppCompatActivity {
     Toolbar toolbar;
     TextView tv_detail_header,tv_detail_description;
+    WebView wv_detail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         toolbar=(Toolbar)findViewById(R.id.item_1toolbar);
-        tv_detail_description=(TextView) findViewById(R.id.tv_detail_description);
-        tv_detail_header=(TextView) findViewById(R.id.tv_detail_header);
+        wv_detail=(WebView) findViewById(R.id.wv_detail);
+        wv_detail.loadUrl("http://www.google.com");
         initialize();
         Intent intent=getIntent();
         String header=intent.getStringExtra("header");
         String description=intent.getStringExtra("description");
         getSupportActionBar().setTitle(header);
-        tv_detail_header.setText(header);
-        tv_detail_description.setText(description);
+
 
 
     }
