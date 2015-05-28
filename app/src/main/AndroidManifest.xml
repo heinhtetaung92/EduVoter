@@ -30,7 +30,8 @@
         </activity>
         <activity
             android:name=".Item_3Activity"
-            android:label="@string/title_activity_item_3">
+            android:label="@string/title_activity_item_3"
+            android:theme="@style/AppTheme">
 
         </activity>
         <activity android:name=".DetailActivity"

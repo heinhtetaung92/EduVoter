@@ -1,11 +1,13 @@
 package com.epicmyanmar.jr.eduvoter;
 
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import fragment.TabMainFragment;
 
@@ -18,6 +20,20 @@ public class Item_3Activity extends ActionBarActivity {
         setContentView(R.layout.activity_item_3);
         toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("How to Vote");
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+
+        }
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().add(R.id.container, new TabMainFragment()).commit();

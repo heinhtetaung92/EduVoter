@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position){
 
             case 0:
+                startActivity(new Intent(MainActivity.this, Item_1Activity.class));
                 break;
 
             case 1:
