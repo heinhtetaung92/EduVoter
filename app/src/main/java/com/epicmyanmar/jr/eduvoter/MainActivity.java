@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         initialize();
 
         listView = (ListView) findViewById(R.id.main_list);
-        List<String> datalist = Arrays.asList(new String[]{"အဓိပ္ပယ်ဖွင့်ဆိုချက်များ","မဲစာရင်းပြုစုခြင်းနှင့် \nမဲစာရင်းစစ်ဆေးခြင်း","FAQ"});
+        List<String> datalist = Arrays.asList(new String[]{"မဲစာရင်းပြုစုခြင်းနှင့် \n" +
+                "မဲစာရင်းစစ်ဆေးခြင်း","မေးလေ့ရှိသည်များ","အဓိပ္ပယ်ဖွင့်ဆိုချက်များ"});
         Cardview_Adapter adp = new Cardview_Adapter(this, datalist);
         listView.setAdapter(adp);
 

@@ -23,7 +23,7 @@ public class Item_2Activity extends ActionBarActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("How to Vote");
+            actionBar.setTitle("မေးလေ့ရှိသည်များ");
             actionBar.setHomeButtonEnabled(true);
             actionBar.setDisplayHomeAsUpEnabled(true);
 

@@ -30,8 +30,9 @@ public class Item_1Activity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_1);
         toolbar=(Toolbar)findViewById(R.id.item_1toolbar);
-
         initialize();
+
+        getSupportActionBar().setTitle("မဲစာရင်းပြုစုခြင်းနှင့် မဲစာရင်းစစ်ဆေးခြင်း");
 
         WebView webView = (WebView) findViewById(R.id.item1_webview);
         webView.loadUrl("file:///android_asset/htmls/vote_list.html");

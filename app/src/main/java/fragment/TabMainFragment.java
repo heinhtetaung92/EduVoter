@@ -44,8 +44,6 @@ public class TabMainFragment extends Fragment implements Thread.UncaughtExceptio
 
         //overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
 
-
-
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
         slidingTabLayout.setCustomTabView(R.layout.tab_indicator, android.R.id.text1);
         slidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.primary_accent));
