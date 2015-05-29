@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ListView;
 
 import com.epicmyanmar.jr.eduvoter.R;
@@ -22,18 +23,21 @@ import adapter.Tab2Adapter;
 public class Tab2Fragment extends Fragment{
 
     View view;
-    ListView listview;
+    /*ListView listview;*/
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_tab2, container, false);
-        listview = (ListView) view.findViewById(R.id.tab2_listview);
+        /*listview = (ListView) view.findViewById(R.id.tab2_listview);
 
         List<String> dl = Arrays.asList(new String[]{"one", "one", "one", "one", "one", "one", "one", "one", "one"});
         Tab2Adapter adp = new Tab2Adapter(getActivity(), dl);
-        listview.setAdapter(adp);
+        listview.setAdapter(adp);*/
+
+        WebView webview = (WebView) view.findViewById(R.id.tab2_webview);
+        webview.loadUrl("file:///android_asset/htmls/why_to_vote.html");
 
         return view;
     }

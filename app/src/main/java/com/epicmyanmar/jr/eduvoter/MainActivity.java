@@ -1,12 +1,9 @@
 package com.epicmyanmar.jr.eduvoter;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -58,11 +55,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
 
             case 1:
-                startActivity(new Intent(MainActivity.this, Item_2Activity.class));
+                startActivity(new Intent(MainActivity.this, Item_3Activity.class));
                 break;
 
             case 2:
-                startActivity(new Intent(MainActivity.this, Item_3Activity.class));
+                startActivity(new Intent(MainActivity.this, Item_2Activity.class));
                 break;
 
         }

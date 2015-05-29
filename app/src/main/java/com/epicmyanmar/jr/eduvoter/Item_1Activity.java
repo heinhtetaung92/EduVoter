@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -21,9 +22,9 @@ import model.VoteRules;
 
 public class Item_1Activity extends ActionBarActivity {
     Toolbar toolbar;
-    ListView listView;
+    /*ListView listView;
 
-    List<VoteRules> mVoteList;
+    List<VoteRules> mVoteList;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +32,16 @@ public class Item_1Activity extends ActionBarActivity {
         toolbar=(Toolbar)findViewById(R.id.item_1toolbar);
 
         initialize();
-        demo_db();
+
+        WebView webView = (WebView) findViewById(R.id.item1_webview);
+        webView.loadUrl("file:///android_asset/htmls/vote_list.html");
+
+        /*demo_db();
 
         listView=(ListView) findViewById(R.id.item1_list);
         Item1_Card_adapter item1_card_adapter=new Item1_Card_adapter(this,mVoteList);
         listView.setAdapter(item1_card_adapter);
-        listView.setOnItemClickListener(new item1_listCLickListener());
+        listView.setOnItemClickListener(new item1_listCLickListener());*/
     }
     void initialize(){
         setSupportActionBar(toolbar);
@@ -59,7 +64,7 @@ public class Item_1Activity extends ActionBarActivity {
     }
 
 
-    void demo_db(){
+    /*void demo_db(){
         mVoteList=new ArrayList<VoteRules>();
         VoteRules vr1=new VoteRules();
         vr1.setHeader("Header 1");
@@ -77,7 +82,7 @@ public class Item_1Activity extends ActionBarActivity {
         mVoteList.add(vr2);
         mVoteList.add(vr3);
         mVoteList.add(vr4);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,7 +106,7 @@ public class Item_1Activity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    protected  class item1_listCLickListener implements AdapterView.OnItemClickListener {
+    /*protected  class item1_listCLickListener implements AdapterView.OnItemClickListener {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -110,5 +115,5 @@ public class Item_1Activity extends ActionBarActivity {
             intent.putExtra("description",mVoteList.get(position).getDescription());
             startActivity(intent);
         }
-    }
+    }*/
 }
