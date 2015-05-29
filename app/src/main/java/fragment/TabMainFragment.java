@@ -67,7 +67,7 @@ public class TabMainFragment extends Fragment implements Thread.UncaughtExceptio
 
     private static class NavigationAdapter extends FragmentStatePagerAdapter {
 
-        private static final String[] TITLES = new String[]{"Tab1", "Tab2"};//, "Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich", "Jelly Bean", "KitKat", "Lollipop"};
+        private static final String[] TITLES = new String[]{"ဘယ်လိုမဲပေးကြမလဲ", "ဘာကြောင့်မဲပေးသင့်သလဲ"};//, "Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich", "Jelly Bean", "KitKat", "Lollipop"};
 
         private SparseArray<Fragment> mPages;
         private int mScrollY;
